@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class PetyaAndStrings {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the two strings
+        String str1 = scanner.nextLine();
+        String str2 = scanner.nextLine();
+        
+        // Convert both strings to lowercase for case-insensitive comparison
+        String normalizedStr1 = str1.toLowerCase();
+        String normalizedStr2 = str2.toLowerCase();
+        
+        // Compare the normalized strings
+        if (normalizedStr1.equals(normalizedStr2)) {
+            System.out.println(0);
+        } else if (normalizedStr1.compareTo(normalizedStr2) < 0) {
+            System.out.println(-1);
+        } else {
+            System.out.println(1);
+        }
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
